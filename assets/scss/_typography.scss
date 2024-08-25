@@ -1,0 +1,58 @@
+@import "./colors";
+@import "./font-family";
+
+
+@mixin font-($fontSize, $lineHeight) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}
+
+@mixin heading_1 {
+  @include font-(48px, 48px);
+  font-family: 'Inter-extrabold';
+}
+
+@mixin heading_2 {
+  @include font-(30px, 36px);
+  font-family: 'Inter-semibold';
+}
+
+@mixin heading_3 {
+  @include font-(24px, 32px);
+  font-family: 'Inter-semibold';
+}
+
+@mixin heading_4 {
+  @include font-(20px, 28px);
+  font-family: 'Inter-semibold';
+}
+
+@mixin heading_4_regular {
+  @include font-(20px, 28px);
+  font-family: 'Inter-regular';
+}
+
+@mixin paragraph {
+  @include font-(16px, 24px);
+  font-family: 'Inter-regular';
+}
+
+@mixin description {
+  @include font-(14px, 22px);
+  font-family: 'Inter-regular';
+}
+
+@mixin lead {
+  @include font-(20px, 28px);
+  font-family: 'Inter-regular';
+}
+
+@mixin small {
+  @include font-(14px, 16px);
+  font-family: 'Inter-regular';
+}
+
+@mixin lead-semibold {
+  @include font-(20px, 28px);
+  font-family: 'Inter-semibold';
+}

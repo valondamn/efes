@@ -1,0 +1,154 @@
+$xsBreakpoint: 0;
+$smBreakpoint: 576px;
+$mdBreakpoint: 768px;
+$lgBreakpoint: 1024px;
+$xlBreakpoint: 1290px;
+$xxlBreakpoint: 1400px;
+
+@mixin sm-breakpoint-down {
+  @media only screen and (max-width: $smBreakpoint - 0.02px) {
+    @content;
+  }
+}
+
+@mixin sm-breakpoint-up {
+  @media only screen and (min-width: $smBreakpoint) {
+    @content;
+  }
+}
+
+@mixin md-breakpoint-down {
+  @media only screen and (max-width: $mdBreakpoint - 0.02px) {
+    @content;
+  }
+}
+
+@mixin md-breakpoint-up {
+  @media only screen and (min-width: $mdBreakpoint) {
+    @content;
+  }
+}
+
+@mixin lg-breakpoint-down {
+  @media only screen and (max-width: $lgBreakpoint - 0.02px) {
+    @content;
+  }
+}
+
+@mixin lg-breakpoint-up {
+  @media only screen and (min-width: $lgBreakpoint) {
+    @content;
+  }
+}
+
+@mixin xl-breakpoint-down {
+  @media only screen and (max-width: $xlBreakpoint - 0.02px) {
+    @content;
+  }
+}
+
+@mixin xl-breakpoint-up {
+  @media only screen and (min-width: $xlBreakpoint) {
+    @content;
+  }
+}
+
+@mixin xxl-breakpoint-down {
+  @media only screen and (max-width: $xxlBreakpoint - 0.02px) {
+    @content;
+  }
+}
+
+@mixin xxl-breakpoint-up {
+  @media only screen and (min-width: $xxlBreakpoint) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-between($lower, $upper) {
+  @if $lower == xs and $upper == sm {
+    @media only screen and (min-width: $xsBreakpoint) and (max-width: $smBreakpoint - 0.02px) {
+      @content;
+    }
+  } @else if $lower == xs and $upper == md {
+    @media only screen and (min-width: $xsBreakpoint) and (max-width: $mdBreakpoint - 0.02px) {
+      @content;
+    }
+  } @else if $lower == xs and $upper == lg {
+    @media only screen and (min-width: $xsBreakpoint) and (max-width: $lgBreakpoint - 0.02px) {
+      @content;
+    }
+  } @else if $lower == xs and $upper == xl {
+    @media only screen and (min-width: $xsBreakpoint) and (max-width: $xlBreakpoint - 0.02px) {
+      @content;
+    }
+  } @else if $lower == xs and $upper == xxl {
+    @media only screen and (min-width: $xsBreakpoint) and (max-width: $xxlBreakpoint - 0.02px) {
+      @content;
+    }
+  } @else if $lower == sm and $upper == md {
+    @media only screen and (min-width: $smBreakpoint) and (max-width: $mdBreakpoint - 0.02px) {
+      @content;
+    }
+  } @else if $lower == sm and $upper == lg {
+    @media only screen and (min-width: $smBreakpoint) and (max-width: $lgBreakpoint - 0.02px) {
+      @content;
+    }
+  } @else if $lower == sm and $upper == xl {
+    @media only screen and (min-width: $smBreakpoint) and (max-width: $xlBreakpoint - 0.02px) {
+      @content;
+    }
+  } @else if $lower == sm and $upper == xxl {
+    @media only screen and (min-width: $smBreakpoint) and (max-width: $xxlBreakpoint - 0.02px) {
+      @content;
+    }
+  } @else if $lower == md and $upper == lg {
+    @media only screen and (min-width: $mdBreakpoint) and (max-width: $lgBreakpoint - 0.02px) {
+      @content;
+    }
+  } @else if $lower == md and $upper == xl {
+    @media only screen and (min-width: $mdBreakpoint) and (max-width: $xlBreakpoint - 0.02px) {
+      @content;
+    }
+  } @else if $lower == md and $upper == xxl {
+    @media only screen and (min-width: $mdBreakpoint) and (max-width: $xxlBreakpoint - 0.02px) {
+      @content;
+    }
+  } @else if $lower == lg and $upper == xl {
+    @media only screen and (min-width: $lgBreakpoint) and (max-width: $xlBreakpoint - 0.02px) {
+      @content;
+    }
+  } @else if $lower == lg and $upper == xxl {
+    @media only screen and (min-width: $lgBreakpoint) and (max-width: $xxlBreakpoint - 0.02px) {
+      @content;
+    }
+  } @else if $lower == xl and $upper == xxl {
+    @media only screen and (min-width: $xlBreakpoint) and (max-width: $xxlBreakpoint - 0.02px) {
+      @content;
+    }
+  } @else if $lower == xs {
+    @media only screen and (min-width: $xsBreakpoint) and (max-width: $upper - 0.02px) {
+      @content;
+    }
+  } @else if $lower == sm {
+    @media only screen and (min-width: $smBreakpoint) and (max-width: $upper - 0.02px) {
+      @content;
+    }
+  } @else if $lower == md {
+    @media only screen and (min-width: $mdBreakpoint) and (max-width: $upper - 0.02px) {
+      @content;
+    }
+  } @else if $lower == lg {
+    @media only screen and (min-width: $lgBreakpoint) and (max-width: $upper - 0.02px) {
+      @content;
+    }
+  } @else if $lower == xl {
+    @media only screen and (min-width: $xlBreakpoint) and (max-width: $upper - 0.02px) {
+      @content;
+    }
+  } @else if $lower == xxl {
+    @media only screen and (min-width: $xxlBreakpoint) and (max-width: $upper - 0.02px) {
+      @content;
+    }
+  }
+}
