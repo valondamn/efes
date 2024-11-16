@@ -1,11 +1,15 @@
 @if (visible) {
   <div class="dropdown-menu" #modalBody>
     <div class="profile-info" *ngIf="userProfile$ | async as userProfile">
-      <img
-        src="{{userProfile.avatar}}"
-        alt="Profile Picture"
-        class="profile-logo"
-      />
+      @if (userProfile.avatar) {
+        <img
+          src="{{ userProfile.avatar }}"
+          alt="Profile Picture"
+          class="profile-logo"
+        />
+      } @else {
+        <img src="/assets/images/main/profile.png" alt="" />
+      }
       <div class="profile-info__name-coins">
         <span>{{ userProfile.first_name }} {{ userProfile.last_name }}</span>
         <div class="coins">

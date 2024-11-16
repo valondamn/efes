@@ -16,9 +16,15 @@
       <app-coins [coins]="userProfile.coins" [isLink]="true"/>
     </div>
     <div (click)="openModal()" class="account-image">
-      <a>
-        <img alt="" src="{{userProfile.avatar}}">
-      </a>
+      @if (userProfile.avatar) {
+        <a>
+          <img alt="" src="{{ userProfile.avatar }}" />
+        </a>
+      } @else {
+        <a>
+          <img src="/assets/images/main/profile.png" alt="" />
+        </a>
+      }
 
     </div>
   </div>
