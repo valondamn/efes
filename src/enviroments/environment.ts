@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  serverURL: 'http://69.197.164.80:8000'
+  serverURL: 'https://bknd.magictap.kz/'
 };
 
 /*
